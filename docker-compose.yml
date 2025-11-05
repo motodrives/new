@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  # PHP Apache Web Server
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: motodrives_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./uploads:/var/www/html/uploads
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_UPLOAD_MAX_FILESIZE=50M
+      - PHP_POST_MAX_SIZE=50M
+    depends_on:
+      - db
+    networks:
+      - motodrives_network
+    restart: unless-stopped
+
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: motodrives_db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: motodrives
+      MYSQL_USER: motodrives_user
+      MYSQL_PASSWORD: motodrives_pass
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql/motodrives.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - motodrives_network
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+
+  # phpMyAdmin (Optional - for database management)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: motodrives_phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: motodrives_user
+      PMA_PASSWORD: motodrives_pass
+    depends_on:
+      - db
+    networks:
+      - motodrives_network
+    restart: unless-stopped
+
+networks:
+  motodrives_network:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local

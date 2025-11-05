@@ -1,0 +1,20 @@
+    
+    if ($filesize > MAX_FILE_SIZE) {
+        return ['success' => false, 'message' => 'File too large'];
+    }
+    
+    // Generate unique filename
+    $newname = time() . '_' . preg_replace('/[^A-Za-z0-9_\-\.]/', '', $filename);
+    $target_path = $destination . $newname;
+    
+    if (move_uploaded_file($file['tmp_name'], $target_path)) {
+        return ['success' => true, 'filename' => $newname, 'path' => $target_path];
+    } else {
+        return ['success' => false, 'message' => 'Upload failed'];
+    }
+}
+
+// Start session
+session_name(SESSION_NAME);
+session_start();
+?>

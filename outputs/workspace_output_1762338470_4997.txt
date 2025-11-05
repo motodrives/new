@@ -1,0 +1,5 @@
+total 176
+drwxr-xr-x 3 root root     81 Nov  5 10:27 .
+drwxr-xr-x 1 root root    162 Nov  5 10:22 ..
+-rw-r--r-- 1 root root 173896 Nov  5 10:27 7734e233-5149-4fbd-8ac8-fe2060bdb02b.zip
+drwxr-xr-x 2 root root   4096 Nov  5 10:27 outputs

@@ -1,0 +1,63 @@
+.
+├── 7734e233-5149-4fbd-8ac8-fe2060bdb02b.zip
+├── DEPLOYMENT.md
+├── DEPLOYMENT_FIX.md
+├── Dockerfile
+├── GITHUB_SETUP.md
+├── MotoDrives_SEO_Master_Sheet.xlsx
+├── PROJECT_SUMMARY.md
+├── QUICK_START.md
+├── README.md
+├── README_GITHUB.md
+├── about.php
+├── admin
+│   ├── dashboard.php
+│   ├── login.php
+│   ├── logout.php
+│   └── manage_products.php
+├── api
+│   ├── contact.php
+│   └── products.php
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   └── js
+│       └── main.js
+├── composer.json
+├── config
+│   ├── config.example.php
+│   └── config.php
+├── contact.php
+├── docker-compose.yml
+├── index.php
+├── install.php
+├── outputs
+│   ├── workspace_output_1762167598_6796.txt
+│   ├── workspace_output_1762338430_6257.txt
+│   ├── workspace_output_1762338436_1778.txt
+│   ├── workspace_output_1762338449_6774.txt
+│   ├── workspace_output_1762338455_6114.txt
+│   ├── workspace_output_1762338460_7209.txt
+│   ├── workspace_output_1762338470_4997.txt
+│   ├── workspace_output_1762338474_9221.txt
+│   ├── workspace_output_1762338479_4526.txt
+│   ├── workspace_output_1762338490_7967.txt
+│   ├── workspace_output_1762338493_8769.txt
+│   ├── workspace_output_1762338497_7217.txt
+│   ├── workspace_output_1762338500_4704.txt
+│   ├── workspace_output_1762338504_5825.txt
+│   ├── workspace_output_1762338507_9560.txt
+│   ├── workspace_output_1762338510_2498.txt
+│   ├── workspace_output_1762338514_828.txt
+│   └── workspace_output_1762338518_3212.txt
+├── products.php
+├── render.yaml
+├── sql
+│   └── motodrives.sql
+├── summarized_conversations
+│   └── original_conversation_1762332149_4493.txt
+├── todo.md
+└── uploads
+
+12 directories, 49 files

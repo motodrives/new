@@ -1,0 +1,54 @@
+Archive:  7734e233-5149-4fbd-8ac8-fe2060bdb02b.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+       29  2025-11-05 09:11   .created
+     8301  2025-11-03 11:35   .htaccess
+     8007  2025-11-03 10:59   MotoDrives_SEO_Master_Sheet.xlsx
+     8163  2025-11-03 11:54   PROJECT_SUMMARY.md
+    10933  2025-11-03 11:45   README.md
+    22054  2025-11-03 11:51   about.php
+        0  2025-11-03 11:47   admin/
+    19688  2025-11-03 11:12   admin/dashboard.php
+    10709  2025-11-03 11:09   admin/login.php
+      451  2025-11-03 11:47   admin/logout.php
+    28865  2025-11-03 11:16   admin/manage_products.php
+        0  2025-11-03 11:47   api/
+     2956  2025-11-03 11:46   api/contact.php
+     3894  2025-11-03 11:47   api/products.php
+        0  2025-11-03 10:59   assets/
+        0  2025-11-03 11:03   assets/css/
+     9579  2025-11-03 11:03   assets/css/style.css
+        0  2025-11-03 10:59   assets/images/
+        0  2025-11-03 11:04   assets/js/
+    14788  2025-11-03 11:04   assets/js/main.js
+        0  2025-11-05 07:04   config/
+     2977  2025-11-03 11:00   config/config.php
+      184  2025-11-05 07:03   config/.gitkeep
+     4182  2025-11-05 07:04   config/config.example.php
+    31490  2025-11-03 11:32   contact.php
+    19070  2025-11-03 11:07   index.php
+    29499  2025-11-03 11:42   install.php
+        0  2025-11-03 10:59   outputs/
+        0  2025-11-03 10:59   outputs/workspace_output_1762167598_6796.txt
+    27421  2025-11-03 11:24   products.php
+        0  2025-11-03 11:01   sql/
+     8034  2025-11-03 11:01   sql/motodrives.sql
+     1424  2025-11-05 07:05   todo.md
+        0  2025-11-05 07:02   uploads/
+      187  2025-11-05 07:02   uploads/.gitkeep
+     2422  2025-11-05 08:55   Dockerfile
+     1756  2025-11-05 07:00   composer.json
+     1512  2025-11-05 07:00   docker-compose.yml
+      819  2025-11-05 07:00   .dockerignore
+     1302  2025-11-05 07:01   render.yaml
+     1438  2025-11-05 07:01   .env.example
+     1114  2025-11-05 07:02   .gitignore
+     8316  2025-11-05 07:02   DEPLOYMENT.md
+     9225  2025-11-05 07:03   GITHUB_SETUP.md
+     8377  2025-11-05 07:05   README_GITHUB.md
+     4703  2025-11-05 07:05   QUICK_START.md
+        0  2025-11-05 08:42   summarized_conversations/
+   353152  2025-11-05 08:42   summarized_conversations/original_conversation_1762332149_4493.txt
+     1330  2025-11-05 08:55   DEPLOYMENT_FIX.md
+---------                     -------
+   668351                     49 files

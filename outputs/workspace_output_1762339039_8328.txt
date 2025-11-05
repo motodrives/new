@@ -1,0 +1,25 @@
+     1	{
+     2	    "name": "motodrives/industrial-website",
+     3	    "description": "Motodrives - Industrial Drives & Automation Equipment Website",
+     4	    "type": "project",
+     5	    "keywords": ["industrial", "drives", "motors", "automation", "manufacturing"],
+     6	    "license": "proprietary",
+     7	    "require": {
+     8	        "php": ">=7.4",
+     9	        "ext-mysqli": "*",
+    10	        "ext-gd": "*",
+    11	        "ext-curl": "*",
+    12	        "ext-json": "*",
+    13	        "ext-mbstring": "*",
+    14	        "ext-session": "*"
+    15	    },
+    16	    "require-dev": {
+    17	        "phpunit/phpunit": "^9.5"
+    18	    },
+    19	    "autoload": {
+    20	        "psr-4": {
+    21	            "Motodrives\&quot;: "src/"
+    22	        },
+    23	        "files": [
+    24	            "config/config.php"
+    25	        ]

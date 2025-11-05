@@ -1,0 +1,55 @@
+# Render.com Blueprint Configuration for Motodrives Website
+
+services:
+  # Web Service (PHP Application)
+  - type: web
+    name: motodrives-web
+    env: docker
+    region: oregon
+    plan: starter
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: motodrives-db
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: motodrives-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: motodrives-db
+          property: user
+      - key: DB_PASS
+        fromDatabase:
+          name: motodrives-db
+          property: password
+      - key: SITE_URL
+        value: https://motodrives-web.onrender.com
+      - key: SITE_NAME
+        value: Motodrives
+      - key: ADMIN_EMAIL
+        value: admin@motodrives.com
+      - key: PHP_MEMORY_LIMIT
+        value: 256M
+      - key: PHP_UPLOAD_MAX_FILESIZE
+        value: 50M
+      - key: PHP_POST_MAX_SIZE
+        value: 50M
+    disk:
+      name: uploads
+      mountPath: /var/www/html/uploads
+      sizeGB: 1
+
+# Database Service (MySQL)
+databases:
+  - name: motodrives-db
+    databaseName: motodrives
+    user: motodrives_user
+    plan: starter
+    region: oregon
+    ipAllowList: []

@@ -1,0 +1,6 @@
+    27	    "autoload-dev": {
+    28	        "psr-4": {
+    29	            "Motodrives\\Tests\&quot;: "tests/"
+    30	        }
+    31	    },
+    32	    "scripts": {

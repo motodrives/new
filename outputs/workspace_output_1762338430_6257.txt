@@ -1,0 +1,4 @@
+total 0
+drwxr-xr-x 3 root root  29 Nov  5 10:27 .
+drwxr-xr-x 1 root root 162 Nov  5 10:22 ..
+drwxr-xr-x 2 root root  58 Nov  5 10:27 outputs

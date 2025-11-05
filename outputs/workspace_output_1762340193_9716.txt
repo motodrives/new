@@ -1,0 +1,15 @@
+<?php
+require_once 'config/config.php';
+
+// Fetch featured products
+$featuredProductsQuery = "SELECT p.*, c.name as category_name FROM products p 
+                          JOIN categories c ON p.category_id = c.id 
+                          WHERE p.status = 'active' AND p.featured = 1 
+                          ORDER BY p.created_at DESC LIMIT 6";
+$featuredProducts = $db->query($featuredProductsQuery);
+
+// Fetch industries
+$industriesQuery = "SELECT * FROM industries WHERE status = 'active' ORDER BY sort_order ASC LIMIT 8";
+$industries = $db->query($industriesQuery);
+
+// Fetch latest blog posts

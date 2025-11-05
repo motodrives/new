@@ -1,0 +1,57 @@
+{
+    "name": "motodrives/industrial-website",
+    "description": "Motodrives - Industrial Drives & Automation Equipment Website",
+    "type": "project",
+    "keywords": ["industrial", "drives", "motors", "automation", "manufacturing"],
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4",
+        "ext-mysqli": "*",
+        "ext-gd": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-session": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Motodrives\&quot;: "src/"
+        },
+        "files": [
+            "config/config.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Motodrives\\Tests\&quot;: "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r &quot;if (!file_exists('config/config.php')) { copy('config/config.example.php', 'config/config.php'); }&quot;",
+            "@php -r &quot;if (!is_dir('uploads')) { mkdir('uploads', 0777, true); }&quot;",
+            "@php -r &quot;if (!is_dir('config')) { mkdir('config', 0777, true); }&quot;"
+        ],
+        "post-update-cmd": [
+            "@php -r &quot;echo 'Dependencies updated successfully!\\n';&quot;"
+        ],
+        "test": "phpunit",
+        "setup": [
+            "@composer install",
+            "@php -r &quot;echo 'Setup complete! Run install.php to configure the database.\\n';&quot;"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
